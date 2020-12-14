@@ -20,7 +20,11 @@
 //Do we have 
 #define HAVE_VSNPRINTF 1
 
+#define bzero(ptr, n) memset(ptr, 0, n)
+
 extern void err_sys(const char* fmt, ...);
+
+extern void err_quit(const char* fmt, ...);
 
 extern ssize_t writen(int, const void *, size_t);
 
